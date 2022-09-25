@@ -3,11 +3,11 @@
 
 class Pokemon
     def initialize(name = '--')
-        puts "Pokemon #{name} criado!"
+        @name = name
     end
 
     def action(move = "Struggle")
-        "Pokemon usou o #{move}"
+        "#{@name} usou o #{move}"
     end
     def recover_hp(currentHP = 0, recoveredHP = 0)
         "HP recuperado para: #{currentHP.to_i + recoveredHP.to_i}"
@@ -22,6 +22,6 @@ mewtwo = Pokemon.new('Mewtwo')
 
 puts mew.action
 puts mew.action("Psystrike")
-puts mew.action("Shadow Ball")
+puts mewtwo.action("Shadow Ball")
 
 puts "O id do Mew é #{mew.object_id} e do Mewtwo é #{mewtwo.object_id}. São da mesma classe Pokemon, mas são objetos diferentes."
