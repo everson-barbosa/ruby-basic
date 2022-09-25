@@ -9,13 +9,19 @@ class Pokemon
     def action(move = "Struggle")
         "Pokemon usou o #{move}"
     end
-    def recoverHP(currentHP = 0, recoveredHP = 0)
+    def recover_hp(currentHP = 0, recoveredHP = 0)
         "HP recuperado para: #{currentHP.to_i + recoveredHP.to_i}"
+    end
+    def get_id
+        self.object_id
     end
 end
 
 mew = Pokemon.new('Mew')
+mewtwo = Pokemon.new('Mewtwo')
+
 puts mew.action
 puts mew.action("Psystrike")
-puts mew.recoverHP
-puts mew.recoverHP(40, 50)
+puts mew.action("Shadow Ball")
+
+puts "O id do Mew é #{mew.object_id} e do Mewtwo é #{mewtwo.object_id}. São da mesma classe Pokemon, mas são objetos diferentes."
