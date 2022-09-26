@@ -1,0 +1,1 @@
+puts "Para instalar as gems do Gemfile, basta rodar bundle install, ele ira gerar um Gemfile.lock"
